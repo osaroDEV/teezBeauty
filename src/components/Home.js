@@ -31,7 +31,7 @@ const Home = () => {
         <div className="main bio-para">
           <p>
             I have been working as a makeup artist since 2017. I have developed
-            a reputation for my outstanding work and commitment to client
+            a reputation for my outstanding work & commitment to client
             satisfaction.
           </p>
           <br />
