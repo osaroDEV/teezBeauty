@@ -1,0 +1,39 @@
+.home {
+  color: #000;
+}
+
+.bio-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.bio-logo {
+  width: 3em;
+  height: 3em;
+}
+.bio-title {
+  font-size: 2.3rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.margin {
+  margin: 1.5em auto;
+}
+
+.bio-para {
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+  padding-bottom: 2.5em;
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  background: gold;
+  margin: auto;
+}

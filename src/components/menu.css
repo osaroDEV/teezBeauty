@@ -1,0 +1,59 @@
+.menu {
+  text-align: center;
+  /* font-weight: bold; */
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(228, 180, 25);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dancing Script", cursive;
+}
+
+.menu div {
+  text-transform: capitalize;
+}
+
+.content {
+  height: 200px;
+  /* border: 1px solid #fff; */
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+.tab {
+  padding: 0.75em 0;
+}
+
+.contact-us {
+  display: block;
+  border: 2px solid #fff;
+  padding: 0.8em 1.2em;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialM {
+  position: absolute;
+  bottom: 3em;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  font-size: 1.5em;
+}
+
+.socialM a {
+  color: #fff;
+}
+
+.socialM a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}

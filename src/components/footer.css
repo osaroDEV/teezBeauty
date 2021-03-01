@@ -1,0 +1,31 @@
+.footer {
+  background-color: #1b1b32;
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  color: #fff;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.socialC {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  font-size: 1.5em;
+}
+
+.socialC a {
+  color: #fff;
+}
+
+.socialC a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.links-container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
