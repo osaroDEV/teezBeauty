@@ -15,7 +15,7 @@ const Home = () => {
     >
       <Header />
       <div>
-        <img className="bio-img" src="./images/bio.jpg" alt="Tracy Onaiwu" />
+        <img className="bio-img" src="./images/face.jpg" alt="Tracy Onaiwu" />
         <section>
           <div className="bio-title center margin">
             <motion.h1
