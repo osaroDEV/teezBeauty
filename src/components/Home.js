@@ -1,9 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
+import styled from 'styled-components'
 import "./home.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Reviews from "./Reviews";
+
+const PictureOverlay = styled.section`
+position: relative;
+height: 375px;
+border: 1px solid green;
+`;
+const BioImage = styled.img`
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+`;
+const Overlay = styled.div`
+  position: absolute;
+  padding: 1.5em;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  line-height: 1.5em;
+  font-size: 1.2rem;
+  z-index: 1;
+`;
+const BioHeader = styled.h2`
+text-align: center;
+`;
 
 const Home = () => {
   return (
@@ -15,7 +44,18 @@ const Home = () => {
     >
       <Header />
       <div>
-        <img className="bio-img" src="./images/face.jpg" alt="Tracy Onaiwu" />
+        <PictureOverlay>
+          <BioImage src="./images/face.jpg" alt="Tracy Onaiwu" />
+          <Overlay>
+            <BioHeader>
+              Teez Beauty
+            </BioHeader>
+            <p>
+              We give you the very best touch.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, est?
+            </p>
+          </Overlay>
+        </PictureOverlay>
         <section>
           <div className="bio-title center margin">
             <motion.h1

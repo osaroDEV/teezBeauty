@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { motion } from "framer-motion";
-import { BiMenuAltRight } from "react-icons/bi";
+import { TiThMenu } from "react-icons/ti";
 import Menu from "./Menu";
 import "./header.css";
 
@@ -15,17 +15,17 @@ const Header = () => {
 
   return (
     <>
-      <motion.div className="header">
-        <div className="logo-img">
-          <motion.img className="bio-logo" src="./images/loader.svg" alt="" />
-          <h3 className="brand">Teez Beauty Glow</h3>
-          <h4>You literally glow</h4>
+      <motion.div className='header'>
+        <div className='logo-img'>
+          <motion.img className='bio-logo' src='../logo.svg' alt='' />
+          <h3 className='brand'>Tracy Onaiwu</h3>
+          <h4>makeup magician</h4>
         </div>
-        <div className="hamburger" onClick={() => openMenu()}>
-          <BiMenuAltRight />
+        <div className='hamburger' onClick={() => openMenu()}>
+          <TiThMenu />
         </div>
       </motion.div>
-      {isMenu ? <Menu openMenu={openMenu} /> : ""}
+      {isMenu ? <Menu openMenu={openMenu} /> : ''}
     </>
   );
 };

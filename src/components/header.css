@@ -17,9 +17,9 @@
 }
 
 .hamburger {
-  font-size: 3em;
+  font-size: 2.3rem;
   position: absolute;
   top: 1em;
-  right: 0.3em;
+  right: 1rem;
   color: #4a164d;
 }
