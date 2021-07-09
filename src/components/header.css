@@ -1,10 +1,17 @@
 .header {
-  background-color: rgb(243, 235, 235);
+  /* background-color: rgb(243, 235, 235); */
+  /* background-color: #e99497; */
+  background-color: #fff;
   width: 100%;
   height: 10em;
   display: flex;
   color: #4a164d;
+  /* color: #fff; */
   align-items: center;
+}
+
+.bio-logo {
+  width: 6rem;
 }
 
 .logo-img {

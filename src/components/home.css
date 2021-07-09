@@ -9,10 +9,7 @@
   margin: auto;
 } */
 
-.bio-logo {
-  width: 3em;
-  height: 3em;
-}
+
 .bio-title {
   font-size: 2.3rem;
 }
@@ -29,6 +26,7 @@
   font-family: "Caveat", cursive;
   font-size: 1.5rem;
   padding-bottom: 2.5em;
+  color: #fff;
 }
 
 .underline {

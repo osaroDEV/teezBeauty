@@ -7,23 +7,30 @@ import Footer from "./Footer";
 import Reviews from "./Reviews";
 
 const PictureOverlay = styled.section`
-position: relative;
-height: 375px;
-border: 1px solid green;
+  position: relative;
+  height: 450px;
 `;
-const BioImage = styled.img`
+const DescPhoto = styled.img`
   position: absolute;
   width: 100%;
   height: auto;
   display: block;
-  margin: auto;
 `;
+
+const BioPhoto = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  padding: .5em;
+`;
+
 const Overlay = styled.div`
   position: absolute;
   padding: 1.5em;
   color: #fff;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   margin: auto;
   line-height: 1.5em;
@@ -37,27 +44,30 @@ text-align: center;
 const Home = () => {
   return (
     <motion.div
-      initial={{ x: "-100vw" }}
+      initial={{ x: '-100vw' }}
       animate={{ x: 0 }}
       // transition={{ delay: 0.5, duration: 0.5 }}
-      className="home main-font"
+      className='home main-font'
     >
       <Header />
       <div>
         <PictureOverlay>
-          <BioImage src="./images/face.jpg" alt="Tracy Onaiwu" />
+          <DescPhoto src='./images/model.jfif' alt="model's photo" />
           <Overlay>
-            <BioHeader>
-              Teez Beauty
-            </BioHeader>
+            <BioHeader>Teez Beauty</BioHeader>
             <p>
-              We give you the very best touch.
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, est?
+              We give you the very best touch. Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Ab, est?
             </p>
           </Overlay>
         </PictureOverlay>
-        <section>
-          <div className="bio-title center margin">
+        <section style={{ background: '#DF5E88' }}>
+          <div className='bio-title center margin'>
+            <BioPhoto
+              className='bio-img'
+              src='./images/face.jpg'
+              alt="Tracy's photo"
+            />
             <motion.h1
             // initial={{ opacity: 0 }}
             // animate={{ opacity: 1 }}
@@ -65,31 +75,30 @@ const Home = () => {
             >
               Tracy Onaiwu
             </motion.h1>
-            <div className="underline"></div>
+            <div className='underline'></div>
+          </div>
+
+          <div className='main bio-para'>
+            <p>
+              I have been working as a makeup artist since 2017. I have
+              developed a reputation for my outstanding work & commitment to
+              client satisfaction.
+            </p>
+            <br />
+            <p>
+              I provide everything from makeup services to executive
+              presentation makeup for all types of faces, looks and beauty
+              needs.
+            </p>
+            <br />
+            <p>
+              It is particularly important to me to offer you holistic and,
+              above all, long-term optimizations in terms of beauty.
+            </p>
           </div>
         </section>
-        <div className="main bio-para">
-          <p>
-            I have been working as a makeup artist since 2017. I have developed
-            a reputation for my outstanding work & commitment to client
-            satisfaction.
-          </p>
-          <br />
-          <p>
-            I provide everything from makeup services to executive presentation
-            makeup for all types of faces, looks and beauty needs.
-          </p>
-          <br />
-          <p>
-            It is particularly important to me to offer you holistic and, above
-            all, long-term optimizations in terms of beauty.
-          </p>
-        </div>
       </div>
-      <div className="photos">
-        <img className="bio-img" src="./images/model.jpg" alt="model" />
-        <img className="bio-img" src="./images/work.jpg" alt="work" />
-      </div>
+      <div className='photos'></div>
       <Reviews />
       <Footer />
     </motion.div>
