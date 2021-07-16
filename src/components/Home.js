@@ -51,8 +51,11 @@ const Overlay = styled.div`
   display: block;
   margin: auto;
   line-height: 1.5em;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   z-index: 1;
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 const BioHeader = styled.h2`
   text-align: center;
@@ -86,8 +89,8 @@ const Underline = styled.div`
 
 const BioPara = styled.div`
   font-family: 'Caveat', cursive;
-  font-size: 1rem;
-  padding-bottom: 2.5em;
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
   color: #fff;
   @media (min-width: 768px) {
     padding: 1rem 1.5rem;
@@ -110,14 +113,21 @@ const MoreServices = styled.div`
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
+  /* border: 1px solid; */
   @media (min-width: 768px) {
     flex-direction: row;
   }
 `;
 
-const H4 = styled.h4`
-text-align: center;
-`
+const SubBioHeader = styled.h4`
+  text-align: center;
+`;
+
+const SideNoteWrapper = styled.div`
+  margin: 1em;
+  /* border: 1px solid; */
+  font-size: 1.3rem;
+`;
 
 const Home = () => {
   return (
@@ -128,7 +138,7 @@ const Home = () => {
       className='home main-font'
     >
       <Header />
-      <div style={{ border: '1px solid red' }}>
+      <div>
         <PictureOverlay>
           {/* <DescPhoto src='./images/model.jfif' alt="model's photo" /> */}
           <DescPhoto />
@@ -155,8 +165,11 @@ const Home = () => {
             />
             <BioNoteWrapper>
               <BioPara>
-                <ArtistHeader>Tracy Onaiwu</ArtistHeader>
-                <Underline />
+                <div style={{ position: 'relative', display: 'inline-block' }}>
+                  <ArtistHeader>Tracy Onaiwu</ArtistHeader>
+                  <Underline style={{ position: 'absolute' }} />
+                </div>
+
                 <p>
                   I have been working as a makeup artist since 2017. I have
                   developed a reputation for my outstanding work & commitment to
@@ -177,34 +190,34 @@ const Home = () => {
             </BioNoteWrapper>
           </BioPhotoSideNoteWrapper>
           <MoreServices>
-            <div>
-                  <H4>Actors</H4>
+            <SideNoteWrapper>
+              <SubBioHeader>Actors</SubBioHeader>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
               nesciunt, fuga accusamus similique esse tempora unde soluta nobis
               repellendus vel numquam adipisci dolores omnis est placeat, minus
               deleniti reprehenderit! Maxime?
-            </div>
-            <div>
-              <H4>Weddings</H4>
+            </SideNoteWrapper>
+            <SideNoteWrapper>
+              <SubBioHeader>Weddings</SubBioHeader>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
               nesciunt, fuga accusamus similique esse tempora unde soluta nobis
               repellendus vel numquam adipisci dolores omnis est placeat, minus
               deleniti reprehenderit! Maxime?
-            </div>
-            <div>
-              <H4>Presentations</H4>
+            </SideNoteWrapper>
+            <SideNoteWrapper>
+              <SubBioHeader>Presentations</SubBioHeader>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
               nesciunt, fuga accusamus similique esse tempora unde soluta nobis
               repellendus vel numquam adipisci dolores omnis est placeat, minus
               deleniti reprehenderit! Maxime?
-            </div>
-            <div>
-<H4>Lorem</H4>
+            </SideNoteWrapper>
+            <SideNoteWrapper>
+              <SubBioHeader>Lorem</SubBioHeader>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
               nesciunt, fuga accusamus similique esse tempora unde soluta nobis
               repellendus vel numquam adipisci dolores omnis est placeat, minus
               deleniti reprehenderit! Maxime?
-            </div>
+            </SideNoteWrapper>
           </MoreServices>
         </BioWrapper>
       </div>

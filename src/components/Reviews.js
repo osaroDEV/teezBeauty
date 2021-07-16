@@ -46,11 +46,11 @@ const Reviews = () => {
             <img className="rev-img" src={img} alt={name} />
             <FaChevronRight onClick={next} />
           </div>
-          <p className="name">{name}</p>
+          <h2 className="name">{name}</h2>
           <div style={{ margin: "1em auto", width: "2em" }}>
             <FaQuoteLeft />
           </div>
-          <p>{text}</p>
+          <p style={{fontSize: '1.5rem'}}>{text}</p>
           <div style={{ margin: "1em auto", width: "2em" }}>
             <FaQuoteRight />
           </div>
