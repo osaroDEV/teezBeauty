@@ -2,15 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import './home.css';
-import Header from './Header';
-import Footer from './Footer';
+// import Header from './Header';
+// import Footer from './Footer';
+
+import Gallery from './Gallery';
+import Contact from './Contact';
 import Reviews from './Reviews';
 
 const PictureOverlay = styled.section`
   position: relative;
-  height: 500px;
+  height: 600px;
   @media (min-width: 768px) {
-    height: 300px;
+    height: 450px;
   }
 `;
 const DescPhoto = styled.div`
@@ -21,6 +24,7 @@ const DescPhoto = styled.div`
   background-image: url(./images/model.jfif);
   background-size: cover;
   background-repeat: no-repeat;
+
 
   @media (min-width: 768px) {
     /* height: 300px; */
@@ -137,13 +141,13 @@ const Home = () => {
       // transition={{ delay: 0.5, duration: 0.5 }}
       className='home main-font'
     >
-      <Header />
+      {/* <Header /> */}
       <div>
         <PictureOverlay>
           {/* <DescPhoto src='./images/model.jfif' alt="model's photo" /> */}
           <DescPhoto />
           <Overlay>
-            <BioHeader>Teez Beauty</BioHeader>
+            <BioHeader style={{paddingTop: '5em'}}>Teez Beauty</BioHeader>
             <p>
               We give you the very best touch. Lorem ipsum dolor sit, amet
               consectetur adipisicing elit. Ab, est?
@@ -221,9 +225,12 @@ const Home = () => {
           </MoreServices>
         </BioWrapper>
       </div>
-      <div className='photos'></div>
+      <div className='photos'>
+        <Gallery/>
+      </div>
+      <Contact/>
       <Reviews />
-      <Footer />
+      {/* <Footer /> */}
     </motion.div>
   );
 };
